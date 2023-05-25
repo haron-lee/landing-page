@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Nav isCertified={isCertified} />
+      <Nav isCertified={isCertified} setIsCertified={setIsCertified} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route

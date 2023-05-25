@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import Button from './common/Button';
 import styled from 'styled-components';
 
-const Nav = ({ isCertified }) => {
+const Nav = ({ isCertified, setIsCertified }) => {
+  const logOut = () => {
+    return setIsCertified(false);
+  };
+
   return (
     <NavStyle>
       <NavInStyle>
@@ -35,7 +39,7 @@ const Nav = ({ isCertified }) => {
           </li>
         </UlStyle>
         {isCertified ? (
-          <Button type="button" rel="noopener noreferrer">
+          <Button type="button" rel="noopener noreferrer" onClick={logOut}>
             Log Out
           </Button>
         ) : (

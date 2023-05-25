@@ -56,14 +56,6 @@ const LogIn = ({ setIsCertified }) => {
     }
   };
 
-  // useEffect(() => {
-  //   if (isCertified) {
-  //     navigate('/');
-  //   } else {
-  //     console.log('로그인 실패');
-  //   }
-  // }, [isCertified]);
-
   // 최초 1번만 실행
   useEffect(() => {
     getUserData();
